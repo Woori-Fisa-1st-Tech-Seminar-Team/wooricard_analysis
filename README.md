@@ -2,14 +2,20 @@
 > **우리 FISA 6기 클라우드 엔지니어링 과정 - ELK 스택 활용 실습 및 프로젝트**
 
 ## 👥 팀원 소개
-| 이름 | 역할 | GitHub |
-| :--- | :--- | :--- |
-| **[손정원]** | 파이프라인 구축 및 시각화 | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)](https://github.com/handgarden) |
-| **[심규보]** | 파이프라인 구축 및 시각화 | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)](https://github.com/Qbooo) |
-| **[이승준]** | 파이프라인 구축 및 시각화 | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)](https://github.com/HiLeeS) |
-| **[사재헌]** | 시각화 및 리드미 작성 | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)](https://github.com/Zaixian5) |
 
----
+| <img src="https://avatars.githubusercontent.com/u/60088307?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/70837945?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/72748734?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/113874212?v=4" width="120" height="120" /> |
+| :------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
+| **손정원** | **심규보** | **이승준** | **사재현** |
+| [GitHub](https://github.com/handgarden) | [GitHub](https://github.com/Qbooo) | [GitHub](https://github.com/HiLeeS) | [GitHub](https://github.com/Zaixian5) |
+
+### 🛠️ 역할 분담
+
+| 이름 | 역할 |
+|------|------|
+| 손정원 | 파이프라인 구축 및 시각화 |
+| 심규보 | 파이프라인 구축 및 시각화 |
+| 이승준 | 파이프라인 구축 및 시각화 |
+| 사재현 | 시각화 및 리드미 작성 |
 
 ## 1. 프로젝트 개요 (Overview)
 
