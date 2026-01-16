@@ -100,7 +100,7 @@
 
 ### 1) Colab 환경의 메모리 한계 및 Duck DB 사용법 미숙(Pandas/Duck DB → Logstash/Elastic search 이관)
 * **문제 상황**: 
-    * 수백만 건의 대용량 카드 결제 데이터(CSV)를 분석하기 위해 Pandas의 `read_csv`를 시도했으나, Colab 환경의 **RAM 할당량 초과(Out of Memory)**로 인해 커널이 강제 종료됨.
+    * 수백만 건의 대용량 카드 결제 데이터(CSV)를 분석하기 위해 Pandas의 `read_csv`를 시도했으나, Colab 환경의 **RAM 할당량 초과(Out of Memory)** 로 인해 커널이 강제 종료됨.
     * 다른 방법으로 Duck DB를 활용한 분석을 시도했으나, 일부 복잡한 쿼리문에서 파싱 에러 빈번히 발생
 * **해결 방안**: 
     * Duck DB, Pandas 대신 **Logstash** 및 **Elasting search**로 데이터 이관
