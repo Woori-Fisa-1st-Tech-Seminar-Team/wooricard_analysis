@@ -35,6 +35,7 @@
 
 ---
 
+
 ## 2. 🧠 전략 수립의 흐름 (Thought Process)
 
 1.  **현황 파악**: 라이프스테이지별 카드 미사용 및 저사용 고객 수를 확인하여 핵심 타겟군 설정.
@@ -148,6 +149,69 @@
 > [4단계] 전략 수립
 > ```
 
+## 6. 🧹 데이터 집계 및 전처리
+### Filebeats 📦
+
+- csv 데이터를 Logstash로 전달
+```yml
+filebeat.inputs:
+    - type: filestream
+      id: wooricard-stream
+      enabled: true
+      paths:
+        - C:/wooricard.csv
+```
+
+### Logstash 🔄
+- Filebeat에서 전달된 데이터를 집계, 변환, 저장
+
+```groovy
+
+# 1. CSV 파일 파싱
+filter {
+    csv {
+    separator => ","
+    skip_header => true
+    columns => [
+      "SEX_CD", "TOT_USE_AM"]
+    }
+
+    # 2. 한글로 변환
+    mutate {
+        rename => {
+            "SEX_CD" => "성별"
+            "TOT_USE_AM" => "총이용금액"
+        }
+    }
+
+    # 3. 값 변환
+    translate {
+        field => "성별"
+        destination => "성별"
+        dictionary => {
+            "1" => "남성"
+            "2" => "여성"
+        }
+        override = true
+    }
+
+    # 4. 타입 변환
+    mutate {
+        convert => {
+            "총이용금액" => "integer"
+        }
+    }
+
+    # 5. 데이터 필터
+    if [총이용금액] == 0 {    
+        drop {}  
+    }
+}
+
+```
+
+## 7. 📊 Kibana 데이터 시각화 (Visualizations)
+
 ### ① 라이프스테이지별 고객 분포 (미사용/저사용/활성)
 
 * **목적**: 어떤 그룹이 카드 사용률을 늘릴 잠재력이 있는가?
@@ -240,7 +304,7 @@
 
 ---
 
-## 6. 💡 최종 분석 결과 및 마케팅 전략
+## 8. 💡 최종 분석 결과 및 마케팅 전략
 
 ### 📈 분석 결론
 데이터 분석 결과, 저사용 고객 중에서 **[2nd Life]** 계층이 푸시 알람 확인율이 가장 높았으며, 이들은 주로 **[보험/병원]**, **[요식업]** 에서 소비하는 경향을 보였음
@@ -310,7 +374,7 @@
 
 ---
 
-## 7. 프로젝트 요약
+## 9. 프로젝트 요약
 
 본 프로젝트는 **"데이터는 있으나 활용하지 못하는"** 카드사의 전형적 문제를 해결한다
 
