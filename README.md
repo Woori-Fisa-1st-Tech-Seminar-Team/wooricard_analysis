@@ -80,7 +80,7 @@
 ### 🤔 왜 푸시 알림인가?
    * **데이터로 검증된 효과:**
       - [사용자 데이터 기반 푸시: 잠재고객의 48%가 구매 전환](https://www.nnt-consulting.com/성공적인-푸시-알림-마케팅-전략-11가지/)
-      - [AI 기반 타겟팅: 전환율 9~20% 증가, 이탈율 13~31% 감소](https://blog.flarelane.co.kr/what_are_push_notifications/)
+      - [AI 기반 타겟팅: 전환율 9\~20% 증가, 이탈율 13\~31% 감소](https://blog.flarelane.co.kr/what_are_push_notifications/)
       - [29CM 사례: 개인화 푸시로 클릭률 6배 향상](https://www.cigro.io/post/2024-마케팅-종류-40가지와-성공사례)
 
    * **비용 효율성:**
